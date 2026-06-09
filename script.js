@@ -1,386 +1,429 @@
+/* ==========================================
+   PORTFOLIO WEBSITE JAVASCRIPT
+   Dinesh Kumar Portfolio
+========================================== */
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const loader = document.getElementById("loader");
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
 
-    setTimeout(() => {
+    const menuBtn = document.querySelector(".menu-btn");
+    const navbar = document.querySelector(".navbar");
 
-        loader.style.opacity = "0";
+    if(menuBtn && navbar){
 
-        setTimeout(() => {
+        menuBtn.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
 
-            loader.style.display = "none";
+        document.querySelectorAll(".nav-links a").forEach(link => {
 
-        }, 500);
+            link.addEventListener("click", () => {
+                navbar.classList.remove("active");
+            });
 
-    }, 1200);
-
-});
-
-
-
-const texts = [
-
-    "Data Analyst",
-    "Power BI Developer",
-    "SQL Specialist",
-    "Python Developer",
-    "Business Intelligence Analyst",
-    "Machine Learning Enthusiast"
-
-];
-
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type() {
-
-    if (count === texts.length) {
-
-        count = 0;
-
+        });
     }
 
-    currentText = texts[count];
+    /* ==========================================
+       STICKY HEADER
+    ========================================== */
 
-    letter = currentText.slice(0, ++index);
+    const header = document.querySelector(".header");
 
-    document.querySelector(".typing").textContent = letter;
+    window.addEventListener("scroll", () => {
 
-    if (letter.length === currentText.length) {
+        if(window.scrollY > 50){
 
-        count++;
+            header.style.boxShadow =
+                "0 10px 30px rgba(0,0,0,0.08)";
 
-        index = 0;
+            header.style.background =
+                "rgba(255,255,255,0.98)";
 
-        setTimeout(type, 1800);
+        } else {
 
-    } else {
+            header.style.boxShadow =
+                "0 2px 20px rgba(0,0,0,0.05)";
 
-        setTimeout(type, 100);
+            header.style.background =
+                "rgba(255,255,255,0.95)";
+        }
 
-    }
+    });
 
-})();
+    /* ==========================================
+       BACK TO TOP BUTTON
+    ========================================== */
 
+    const backToTop =
+        document.getElementById("backToTop");
 
+    window.addEventListener("scroll", () => {
 
-const counters = document.querySelectorAll(".counter");
+        if(window.scrollY > 400){
 
-const speed = 200;
+            backToTop.style.display = "flex";
+            backToTop.style.alignItems = "center";
+            backToTop.style.justifyContent = "center";
 
-const startCounter = () => {
+        } else {
 
-    counters.forEach(counter => {
+            backToTop.style.display = "none";
+        }
 
-        const target = +counter.getAttribute("data-target");
+    });
 
-        const updateCount = () => {
+    backToTop.addEventListener("click", () => {
 
-            const count = +counter.innerText;
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
-            const increment = Math.ceil(target / speed);
+    });
 
-            if (count < target) {
+    /* ==========================================
+       ACTIVE NAVIGATION
+    ========================================== */
 
-                counter.innerText = count + increment;
+    const sections =
+        document.querySelectorAll("section");
 
-                setTimeout(updateCount, 10);
+    const navLinks =
+        document.querySelectorAll(".nav-links a");
 
-            } else {
+    window.addEventListener("scroll", () => {
 
-                if (target >= 1000) {
+        let current = "";
 
-                    counter.innerText =
-                        target.toLocaleString() + "+";
+        sections.forEach(section => {
 
-                } else {
+            const sectionTop =
+                section.offsetTop - 150;
 
-                    counter.innerText = target + "+";
+            const sectionHeight =
+                section.clientHeight;
 
-                }
+            if(window.scrollY >= sectionTop){
 
+                current = section.getAttribute("id");
             }
 
-        };
+        });
 
-        updateCount();
+        navLinks.forEach(link => {
 
-    });
+            link.classList.remove("active");
 
-};
+            if(
+                link.getAttribute("href")
+                === `#${current}`
+            ){
 
-
-
-const statsSection = document.querySelector(".stats-section");
-
-let statsStarted = false;
-
-const statsObserver = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting && !statsStarted) {
-
-            startCounter();
-
-            statsStarted = true;
-
-        }
-
-    });
-
-});
-
-if (statsSection) {
-
-    statsObserver.observe(statsSection);
-
-}
-
-
-
-const revealElements = document.querySelectorAll(
-
-    ".section-title, .skill-card, .project-card, .cert-card, .domain-card, .timeline-item, .stat-card, .why-grid div"
-
-);
-
-const revealOnScroll = () => {
-
-    revealElements.forEach(element => {
-
-        const windowHeight = window.innerHeight;
-
-        const elementTop =
-            element.getBoundingClientRect().top;
-
-        const revealPoint = 100;
-
-        if (elementTop < windowHeight - revealPoint) {
-
-            element.classList.add("active");
-
-        }
-
-    });
-
-};
-
-window.addEventListener("scroll", revealOnScroll);
-
-revealOnScroll();
-
-
-
-window.addEventListener("scroll", () => {
-
-    const nav = document.querySelector("nav");
-
-    if (window.scrollY > 80) {
-
-        nav.style.padding = "15px 8%";
-
-        nav.style.background =
-            "rgba(2,6,23,0.97)";
-
-        nav.style.boxShadow =
-            "0 10px 30px rgba(0,0,0,.3)";
-
-    } else {
-
-        nav.style.padding = "20px 8%";
-
-        nav.style.background =
-            "rgba(2,6,23,.9)";
-
-        nav.style.boxShadow = "none";
-
-    }
-
-});
-
-
-
-const menuBtn =
-    document.querySelector(".menu-btn");
-
-const navLinks =
-    document.querySelector(".nav-links");
-
-if (menuBtn) {
-
-    menuBtn.addEventListener("click", () => {
-
-        navLinks.classList.toggle("mobile-active");
-
-    });
-
-}
-
-
-
-document.querySelectorAll(".nav-links a")
-    .forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navLinks.classList.remove(
-                "mobile-active"
-            );
+                link.classList.add("active");
+            }
 
         });
 
     });
 
+    /* ==========================================
+       COUNTER ANIMATION
+    ========================================== */
 
+    const statNumbers =
+        document.querySelectorAll(".stat-box h3");
 
-const sections =
-    document.querySelectorAll("section");
+    let counterStarted = false;
 
-const navItems =
-    document.querySelectorAll(".nav-links a");
+    function startCounters(){
 
-window.addEventListener("scroll", () => {
+        if(counterStarted) return;
 
-    let current = "";
-
-    sections.forEach(section => {
+        const statsSection =
+            document.querySelector(".stats-container");
 
         const sectionTop =
-            section.offsetTop - 150;
+            statsSection.getBoundingClientRect().top;
 
-        const sectionHeight =
-            section.clientHeight;
+        if(sectionTop < window.innerHeight - 100){
 
-        if (pageYOffset >= sectionTop) {
+            counterStarted = true;
 
-            current = section.getAttribute("id");
+            statNumbers.forEach(counter => {
+
+                let target =
+                    counter.innerText.replace(/\D/g,'');
+
+                target = Number(target);
+
+                if(target === 0) return;
+
+                let count = 0;
+
+                const speed =
+                    target / 100;
+
+                const updateCounter = () => {
+
+                    if(count < target){
+
+                        count += speed;
+
+                        counter.innerText =
+                            Math.ceil(count) + "+";
+
+                        requestAnimationFrame(
+                            updateCounter
+                        );
+
+                    } else {
+
+                        counter.innerText =
+                            target + "+";
+                    }
+
+                };
+
+                updateCounter();
+
+            });
 
         }
-
-    });
-
-    navItems.forEach(link => {
-
-        link.classList.remove("active-link");
-
-        if (
-
-            link.getAttribute("href") ===
-            "#" + current
-
-        ) {
-
-            link.classList.add("active-link");
-
-        }
-
-    });
-
-});
-
-
-
-const heroImage =
-    document.querySelector(".hero-right img");
-
-window.addEventListener("mousemove", e => {
-
-    if (!heroImage) return;
-
-    let x =
-        (window.innerWidth / 2 - e.pageX) / 40;
-
-    let y =
-        (window.innerHeight / 2 - e.pageY) / 40;
-
-    heroImage.style.transform =
-        `translate(${x}px, ${y}px)`;
-
-});
-
-
-
-const scrollBtn =
-    document.createElement("button");
-
-scrollBtn.innerHTML =
-    '<i class="fas fa-arrow-up"></i>';
-
-scrollBtn.classList.add("scroll-top");
-
-document.body.appendChild(scrollBtn);
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 400) {
-
-        scrollBtn.classList.add("show");
-
-    } else {
-
-        scrollBtn.classList.remove("show");
 
     }
 
-});
+    window.addEventListener(
+        "scroll",
+        startCounters
+    );
 
-scrollBtn.addEventListener("click", () => {
+    startCounters();
 
-    window.scrollTo({
+    /* ==========================================
+       SCROLL REVEAL ANIMATION
+    ========================================== */
 
-        top: 0,
+    const revealElements =
+        document.querySelectorAll(
+            ".skill-card, .project-card, .achievement-card, .education-card, .timeline-content, .contact-card"
+        );
 
-        behavior: "smooth"
+    revealElements.forEach(el => {
 
-    });
-
-});
-
-
-
-const projectCards =
-    document.querySelectorAll(".project-card");
-
-projectCards.forEach(card => {
-
-    card.addEventListener("mousemove", e => {
-
-        const rect =
-            card.getBoundingClientRect();
-
-        const x =
-            e.clientX - rect.left;
-
-        const y =
-            e.clientY - rect.top;
-
-        card.style.setProperty("--x", `${x}px`);
-        card.style.setProperty("--y", `${y}px`);
+        el.style.opacity = "0";
+        el.style.transform =
+            "translateY(40px)";
+        el.style.transition =
+            "all 0.7s ease";
 
     });
 
+    function revealOnScroll(){
+
+        revealElements.forEach(el => {
+
+            const top =
+                el.getBoundingClientRect().top;
+
+            const windowHeight =
+                window.innerHeight;
+
+            if(top < windowHeight - 100){
+
+                el.style.opacity = "1";
+                el.style.transform =
+                    "translateY(0)";
+            }
+
+        });
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        revealOnScroll
+    );
+
+    revealOnScroll();
+
+    /* ==========================================
+       SKILL BAR ANIMATION
+    ========================================== */
+
+    const progressBars =
+        document.querySelectorAll(".progress-fill");
+
+    let skillAnimated = false;
+
+    function animateSkills(){
+
+        if(skillAnimated) return;
+
+        const skills =
+            document.querySelector(".skills");
+
+        const position =
+            skills.getBoundingClientRect().top;
+
+        if(position < window.innerHeight - 100){
+
+            skillAnimated = true;
+
+            progressBars.forEach(bar => {
+
+                const width =
+                    bar.classList.contains("fill-95")
+                    ? "95%"
+                    : bar.classList.contains("fill-92")
+                    ? "92%"
+                    : bar.classList.contains("fill-90")
+                    ? "90%"
+                    : bar.classList.contains("fill-85")
+                    ? "85%"
+                    : "80%";
+
+                bar.style.width = "0";
+
+                setTimeout(() => {
+
+                    bar.style.width = width;
+
+                }, 200);
+
+            });
+
+        }
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        animateSkills
+    );
+
+    animateSkills();
+
+    /* ==========================================
+       CONTACT FORM
+    ========================================== */
+
+    const contactForm =
+        document.querySelector(".contact-form");
+
+    if(contactForm){
+
+        contactForm.addEventListener(
+            "submit",
+            (e) => {
+
+                e.preventDefault();
+
+                const inputs =
+                    contactForm.querySelectorAll(
+                        "input, textarea"
+                    );
+
+                let valid = true;
+
+                inputs.forEach(input => {
+
+                    if(
+                        input.value.trim() === ""
+                    ){
+
+                        valid = false;
+
+                        input.style.border =
+                            "1px solid red";
+
+                    } else {
+
+                        input.style.border =
+                            "1px solid #dbe3f0";
+                    }
+
+                });
+
+                if(valid){
+
+                    alert(
+                        "Thank you for contacting Dinesh Kumar. Your message has been submitted successfully."
+                    );
+
+                    contactForm.reset();
+                }
+
+            }
+        );
+    }
+
+    /* ==========================================
+       SMOOTH SCROLLING
+    ========================================== */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
+
+            anchor.addEventListener(
+                "click",
+                function(e){
+
+                    e.preventDefault();
+
+                    const target =
+                        document.querySelector(
+                            this.getAttribute("href")
+                        );
+
+                    if(target){
+
+                        window.scrollTo({
+                            top:
+                                target.offsetTop - 70,
+                            behavior:"smooth"
+                        });
+                    }
+                }
+            );
+
+        });
+
+    /* ==========================================
+       CURRENT YEAR AUTO UPDATE
+    ========================================== */
+
+    const footerYear =
+        document.querySelector(
+            ".footer-bottom p"
+        );
+
+    if(footerYear){
+
+        const year =
+            new Date().getFullYear();
+
+        footerYear.innerHTML =
+            `© ${year} Dinesh Kumar. All Rights Reserved.`;
+    }
+
+    /* ==========================================
+       PAGE LOADED EFFECT
+    ========================================== */
+
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+
+        document.body.style.transition =
+            "opacity 0.8s ease";
+
+        document.body.style.opacity = "1";
+
+    }, 100);
+
 });
-
-
-
-const footerText =
-    document.querySelector("footer p");
-
-if (footerText) {
-
-    const year =
-        new Date().getFullYear();
-
-    footerText.innerHTML =
-        `© ${year} Shalini Jakkam | Data Analyst Portfolio`;
-
-}
-
-console.log(
-    "%cPortfolio Loaded Successfully ",
-    "color:#38bdf8;font-size:16px;font-weight:bold;"
-);

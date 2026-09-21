@@ -1,1623 +1,2194 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinesh Kumar | Healthcare Operations Professional</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Alex Morgan | Excel & Power BI Specialist</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta name="description"
+      content="Professional portfolio of Alex Morgan, an Excel and Power BI Specialist with 4+ years of experience in data analytics, dashboards, reporting and business intelligence.">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta name="keywords"
+      content="Excel Expert, Power BI Developer, Data Analyst, Power BI Dashboard, Excel Dashboard, Business Intelligence">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#07111f;
+    color:#e8eef7;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+:root{
+    --bg:#07111f;
+    --bg2:#0b1728;
+    --card:#0e1d31;
+    --card2:#10243c;
+    --blue:#35a7ff;
+    --cyan:#21d4fd;
+    --green:#38e09b;
+    --white:#ffffff;
+    --muted:#94a7bd;
+    --border:rgba(255,255,255,.09);
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:var(--blue);
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-family:'Poppins',sans-serif;
+    font-size:42px;
+    margin-top:10px;
+}
+
+.section-title p{
+    color:var(--muted);
+    max-width:650px;
+    margin:15px auto 0;
+}
+
+/* =========================================================
+   BACKGROUND EFFECT
+========================================================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,rgba(53,167,255,.10),transparent 70%);
+    top:-250px;
+    left:-200px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,rgba(56,224,155,.07),transparent 70%);
+    right:-250px;
+    bottom:-250px;
+    z-index:-1;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,17,31,.85);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
+}
+
+.navbar{
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:'Poppins',sans-serif;
+    font-size:22px;
+    font-weight:800;
+}
+
+.logo span{
+    color:var(--blue);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#c6d2df;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--blue);
+}
+
+.nav-btn{
+    padding:10px 18px;
+    border:1px solid var(--blue);
+    border-radius:8px;
+    color:var(--blue)!important;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:100px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-label{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgba(53,167,255,.3);
+    background:rgba(53,167,255,.07);
+    border-radius:30px;
+    color:var(--blue);
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Poppins',sans-serif;
+    font-size:65px;
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:var(--blue);
+}
+
+.hero-description{
+    color:var(--muted);
+    max-width:650px;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 23px;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--blue);
+    color:#03101d;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(53,167,255,.25);
+}
+
+.btn-outline{
+    border:1px solid var(--border);
+    color:white;
+}
+
+.btn-outline:hover{
+    border-color:var(--blue);
+    color:var(--blue);
+}
+
+/* Hero Card */
+
+.hero-card{
+    position:relative;
+}
+
+.profile-card{
+    background:linear-gradient(145deg,#10243c,#091728);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.profile-image{
+    width:180px;
+    height:180px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    border:6px solid rgba(255,255,255,.08);
+    box-shadow:0 0 30px rgba(53,167,255,.25);
+}
+
+.profile-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.profile-card h3{
+    margin-top:20px;
+    font-size:24px;
+}
+
+.profile-card p{
+    color:var(--muted);
+    margin-top:5px;
+}
+
+.profile-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:30px;
+}
+
+.profile-stat{
+    padding:15px 5px;
+    background:rgba(255,255,255,.04);
+    border-radius:10px;
+}
+
+.profile-stat strong{
+    display:block;
+    color:var(--blue);
+    font-size:20px;
+}
+
+.profile-stat small{
+    color:var(--muted);
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-text h3{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:var(--muted);
+    margin-bottom:18px;
+}
+
+.about-boxes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.about-box{
+    padding:25px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:15px;
+}
+
+.about-box h4{
+    color:var(--blue);
+    font-size:25px;
+}
+
+.about-box p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.skill-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:28px;
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(53,167,255,.5);
+}
+
+.skill-icon{
+    width:50px;
+    height:50px;
+    border-radius:12px;
+    background:rgba(53,167,255,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--blue);
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.skill-card h3{
+    margin-bottom:10px;
+}
+
+.skill-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.progress{
+    margin-top:18px;
+}
+
+.progress-top{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    margin-bottom:7px;
+}
+
+.progress-top span:last-child{
+    color:var(--blue);
+}
+
+.progress-bar{
+    height:6px;
+    background:#1a2b40;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    background:linear-gradient(90deg,var(--blue),var(--cyan));
+    border-radius:10px;
+}
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#1e344c;
+}
+
+.timeline-item{
+    position:relative;
+    padding-left:65px;
+    margin-bottom:45px;
+}
+
+.timeline-dot{
+    position:absolute;
+    left:11px;
+    top:5px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--blue);
+    box-shadow:0 0 20px rgba(53,167,255,.5);
+}
+
+.timeline-content{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:28px;
+    border-radius:15px;
+}
+
+.timeline-content h3{
+    font-size:22px;
+}
+
+.timeline-content h4{
+    color:var(--blue);
+    margin:5px 0;
+}
+
+.timeline-date{
+    display:inline-block;
+    margin:10px 0;
+    font-size:13px;
+    color:var(--green);
+}
+
+.timeline-content p,
+.timeline-content li{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.timeline-content ul{
+    padding-left:18px;
+}
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.project-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-7px);
+}
+
+.project-image{
+    height:210px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+    linear-gradient(135deg,rgba(53,167,255,.2),rgba(56,224,155,.1)),
+    #0a192a;
+    position:relative;
+}
+
+.dashboard{
+    width:80%;
+    height:130px;
+    background:#12263d;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:10px;
+    padding:12px;
+}
+
+.dashboard-top{
+    display:flex;
+    gap:7px;
+    margin-bottom:10px;
+}
+
+.dashboard-dot{
+    width:7px;
+    height:7px;
+    background:#4ca8ff;
+    border-radius:50%;
+}
+
+.dashboard-body{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:7px;
+}
+
+.d-box{
+    height:28px;
+    background:#1d3a59;
+    border-radius:4px;
+}
+
+.chart{
+    grid-column:span 3;
+    height:60px;
+    background:
+    linear-gradient(135deg,transparent 45%,#36b8ff 46%,transparent 48%),
+    linear-gradient(40deg,transparent 45%,#36e09a 46%,transparent 48%),
+    #102b45;
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+}
+
+.project-content p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.tags{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin:15px 0;
+}
+
+.tag{
+    padding:5px 10px;
+    background:rgba(53,167,255,.08);
+    color:var(--blue);
+    border-radius:20px;
+    font-size:11px;
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:30px;
+}
+
+.service-number{
+    font-size:13px;
+    color:var(--blue);
+    margin-bottom:15px;
+}
+
+.service h3{
+    margin-bottom:10px;
+}
+
+.service p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* =========================================================
+   CERTIFICATIONS
+========================================================= */
+
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.cert{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:25px;
+    border-radius:15px;
+}
+
+.cert h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.cert p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats{
+    background:#091827;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.stat h2{
+    color:var(--blue);
+    font-size:42px;
+}
+
+.stat p{
+    color:var(--muted);
+}
+
+/* =========================================================
+   TESTIMONIAL
+========================================================= */
+
+.testimonials{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.testimonial{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:30px;
+    border-radius:15px;
+}
+
+.stars{
+    color:#ffd166;
+    margin-bottom:15px;
+}
+
+.testimonial p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.person{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+}
+
+.person-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--blue),var(--green));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.person small{
+    color:var(--muted);
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:40px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-item{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:20px;
+    border-radius:12px;
+}
+
+.contact-item span{
+    color:var(--blue);
+    font-size:13px;
+}
+
+.contact-item strong{
+    display:block;
+    margin-top:5px;
+}
+
+.contact-form{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:30px;
+    border-radius:15px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    font-size:13px;
+    margin-bottom:7px;
+    color:#c9d5e3;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    background:#081625;
+    border:1px solid var(--border);
+    color:white;
+    padding:13px;
+    border-radius:8px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:var(--blue);
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:35px 0;
+    border-top:1px solid var(--border);
+    text-align:center;
+}
+
+footer p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    z-index:999;
+    box-shadow:0 10px 30px rgba(37,211,102,.3);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:fixed;
+        top:75px;
+        right:-100%;
+        width:75%;
+        height:calc(100vh - 75px);
+        background:#081625;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:35px;
+        transition:.4s;
+        border-left:1px solid var(--border);
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:130px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cert-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    .profile-card{
+        padding:25px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .skills-grid,
+    .services-grid,
+    .projects-grid,
+    .testimonials,
+    .cert-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-boxes{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat h2{
+        font-size:32px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- =========================
-        HEADER START
-========================== -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-<header class="header">
+<header>
 
-    <div class="container">
+<div class="container navbar">
 
-        <div class="logo">
-            <a href="#">
-                <span>D</span>K
-            </a>
-        </div>
+<a href="#home" class="logo">
+Aryakshatriya Dinesh kumar <span>.</span>
+</a>
 
-        <nav class="navbar">
+<nav class="nav-links" id="navLinks">
 
-            <ul class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#services">Services</a>
+<a href="#contact" class="nav-btn">Contact</a>
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
+</nav>
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
+<div class="menu-btn" id="menuBtn">
+☰
+</div>
 
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-        <div class="menu-btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-
-    </div>
+</div>
 
 </header>
 
-<!-- =========================
-        HEADER END
-========================== -->
 
-
-<!-- =========================
-        HERO SECTION START
-========================== -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero" id="home">
 
-    <div class="container">
+<div class="container hero-grid">
 
-        <div class="hero-content">
+<div>
 
-            <div class="hero-text">
+<span class="hero-label">
+4.8 YEARS EXPERIENCE
+</span>
 
-                <div class="hero-badge">
-                    <i class="fa-solid fa-award"></i>
-                    Healthcare Operations Professional
-                </div>
+<h1>
+Excel & <span>Power BI</span><br>
+Power BI Developer
+</h1>
 
-                <h1>
-                    Hi, I'm
-                    <span>Dinesh Kumar</span>
-                </h1>
+<p class="hero-description">
 
-                <h2>
-                    Healthcare Claims Processing Specialist
-                    <br>
-                    Provider Relations Expert
-                </h2>
+I transform raw business data into meaningful insights,
+interactive dashboards and automated reports using
+Microsoft Excel, Power BI, SQL and modern data analytics techniques.
 
-                <p>
-                    Results-driven Healthcare Operations Professional with
-                    4+ years of experience in healthcare claims processing,
-                    provider relations, contract administration, customer support,
-                    and healthcare operations.
-                </p>
+</p>
 
-                <div class="hero-buttons">
+<div class="hero-buttons">
 
-                    <a href="#" class="btn primary-btn">
-                        Download Resume
-                    </a>
 
-                    <a href="#contact" class="btn secondary-btn">
-                        Contact Me
-                    </a>
+<a href="resume.pdf" download class="btn btn-outline">
+Download Resume
+</a>
 
-                </div>
+</div>
 
-                <div class="hero-social">
+</div>
 
-                    <a href="#">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
 
-                    <a href="#">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+<div class="hero-card">
 
-                    <a href="#">
-                        <i class="fas fa-phone"></i>
-                    </a>
+<div class="profile-card">
 
-                </div>
+<div class="profile-image">
+    <img src="pic.png" alt="Aryakshatriya Dinesh Kumar">
+</div>
 
-            </div>
+<h3>Aryakshatriya Dinesh kumar </h3>
 
-            <div class="hero-image">
+<p>Data Analyst | Power BI Developer</p>
 
-                <div class="profile-card">
+<div class="profile-stats">
 
-                    <div class="profile-image">
+<div class="profile-stat">
+<strong>4.8</strong>
+<small>Years</small>
+</div>
 
-                        <!-- Add Your Image Here -->
-                        <img src="images/profile.png"
-                            alt="Dinesh Kumar">
+<div class="profile-stat">
+<strong>35+</strong>
+<small>Projects</small>
+</div>
 
-                    </div>
+<div class="profile-stat">
+<strong>1</strong>
+<small>Clients</small>
+</div>
 
-                    <div class="profile-details">
+</div>
 
-                        <h3>Dinesh Kumar</h3>
+</div>
 
-                        <p>
-                            Healthcare Operations Professional
-                        </p>
+</div>
 
-                        <div class="location">
-
-                            <i class="fa-solid fa-location-dot"></i>
-
-                            Hyderabad, Telangana
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Stats -->
-
-        <div class="stats-container">
-
-            <div class="stat-box">
-
-                <h3>4+</h3>
-
-                <p>
-                    Years Experience
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h3>100%</h3>
-
-                <p>
-                    Data Accuracy
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h3>2+</h3>
-
-                <p>
-                    Major Projects
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h3>5000+</h3>
-
-                <p>
-                    Provider Interactions
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- =========================
-        HERO SECTION END
-========================== -->
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>About Me</span>
+
+<h2>Turning Data Into Decisions</h2>
+
+<p>
+A data-focused professional specializing in Excel,
+Power BI dashboards, reporting automation and business analytics.
+</p>
+
+</div>
 
 
-<!-- =========================
-        ABOUT SECTION START
-========================== -->
+<div class="about-grid">
 
-<section class="about" id="about">
+<div class="about-text">
 
-    <div class="container">
+<h3>
+I help businesses understand their data.
+</h3>
 
-        <div class="section-title">
+<p>
+I am a Data Analyst with more than four years of
+professional experience working with Excel, Power BI,
+SQL and business intelligence solutions.
+</p>
 
-            <span>About Me</span>
+<p>
+My work focuses on converting complex datasets into
+simple, interactive and decision-ready dashboards.
+</p>
 
-            <h2>
-                Professional Healthcare Operations Expert
-            </h2>
+<p>
+I have worked on sales analytics, financial reporting,
+HR analytics, inventory analysis, customer analytics and
+operational dashboards.
+</p>
 
-        </div>
+<p>
+My goal is simple: make data easier to understand,
+faster to analyze and more useful for business decisions.
+</p>
 
-        <div class="about-wrapper">
+</div>
 
-            <div class="about-left">
 
-                <div class="about-image">
+<div class="about-boxes">
 
-                    <!-- Add Your Image -->
-                    <img src="images/about.png"
-                        alt="About Dinesh">
+<div class="about-box">
+<h4>4.8</h4>
+<p>Years of Experience</p>
+</div>
 
-                </div>
+<div class="about-box">
+<h4>35+</h4>
+<p>Analytics Projects</p>
+</div>
 
-            </div>
+<div class="about-box">
+<h4>1</h4>
+<p>Business Clients</p>
+</div>
 
-            <div class="about-right">
+<div class="about-box">
+<h4>15+</h4>
+<p>Dashboards Created</p>
+</div>
 
-                <h3>
-                    Delivering Excellence In Healthcare Operations
-                </h3>
+</div>
 
-                <p>
-                    I am a dedicated Healthcare Operations Professional with
-                    extensive experience in healthcare claims processing,
-                    provider support, contract administration, customer service,
-                    and healthcare data management.
-                </p>
+</div>
 
-                <p>
-                    Throughout my career at Cognizant Technology Solutions,
-                    I have successfully handled provider inquiries,
-                    claims processing activities, data validation,
-                    reporting functions, and operational support tasks
-                    while maintaining high service standards.
-                </p>
-
-                <p>
-                    My expertise includes provider relationship management,
-                    claims resolution, healthcare operations,
-                    Salesforce CRM administration, reporting,
-                    and process improvement initiatives.
-                </p>
-
-                <div class="about-info">
-
-                    <div class="info-box">
-
-                        <span>Name</span>
-
-                        <p>Dinesh Kumar</p>
-
-                    </div>
-
-                    <div class="info-box">
-
-                        <span>Phone</span>
-
-                        <p>+91 8247836373</p>
-
-                    </div>
-
-                    <div class="info-box">
-
-                        <span>Email</span>
-
-                        <p>
-                            dineeshkumar41@gmail.com
-                        </p>
-
-                    </div>
-
-                    <div class="info-box">
-
-                        <span>Location</span>
-
-                        <p>
-                            Hyderabad, Telangana
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- =========================
-        ABOUT SECTION END
-========================== -->
 
+<!-- =====================================================
+     SKILLS
+===================================================== -->
 
-<!-- CSS + JS FILES -->
-<script src="script.js"></script>
+<section id="skills">
 
-</body>
-</html>
+<div class="container">
 
-<!-- ==========================================
-        SKILLS SECTION START
-========================================== -->
+<div class="section-title">
 
-<section class="skills" id="skills">
+<span>Technical Skills</span>
 
-    <div class="container">
+<h2>My Core Expertise</h2>
 
-        <div class="section-title">
+<p>
+Tools and technologies I use to analyze,
+visualize and communicate business data.
+</p>
 
-            <span>My Expertise</span>
+</div>
 
-            <h2>Core Skills & Competencies</h2>
 
-        </div>
+<div class="skills-grid">
 
-        <div class="skills-grid">
 
-            <!-- Skill Card 1 -->
+<div class="skill-card">
 
-            <div class="skill-card">
+<div class="skill-icon">EX</div>
 
-                <div class="skill-icon">
-                    <i class="fa-solid fa-file-medical"></i>
-                </div>
+<h3>Microsoft Excel</h3>
 
-                <h3>Healthcare Claims Processing</h3>
+<p>
+Advanced Excel, Pivot Tables, Power Query,
+Power Pivot, dashboards, automation and reporting.
+</p>
 
-                <p>
-                    Extensive experience in claims processing,
-                    verification, documentation review,
-                    claim settlements, and issue resolution.
-                </p>
+<div class="progress">
 
-            </div>
+<div class="progress-top">
+<span>Expertise</span>
+<span>95%</span>
+</div>
 
-            <!-- Skill Card 2 -->
+<div class="progress-bar">
+<div class="progress-fill" style="width:95%"></div>
+</div>
 
-            <div class="skill-card">
+</div>
 
-                <div class="skill-icon">
-                    <i class="fa-solid fa-hospital-user"></i>
-                </div>
+</div>
 
-                <h3>Provider Relations</h3>
 
-                <p>
-                    Managing provider communications,
-                    inquiries, escalations, onboarding,
-                    and relationship management activities.
-                </p>
+<div class="skill-card">
 
-            </div>
+<div class="skill-icon">BI</div>
 
-            <!-- Skill Card 3 -->
+<h3>Power BI</h3>
 
-            <div class="skill-card">
+<p>
+Interactive dashboards, DAX, Power Query,
+data modeling, KPIs and business intelligence.
+</p>
 
-                <div class="skill-icon">
-                    <i class="fa-solid fa-file-signature"></i>
-                </div>
+<div class="progress">
 
-                <h3>Contract Administration</h3>
+<div class="progress-top">
+<span>Expertise</span>
+<span>95%</span>
+</div>
 
-                <p>
-                    Contract maintenance, renewals,
-                    provider agreements, movement notices,
-                    and compliance support.
-                </p>
+<div class="progress-bar">
+<div class="progress-fill" style="width:95%"></div>
+</div>
 
-            </div>
+</div>
 
-            <!-- Skill Card 4 -->
+</div>
 
-            <div class="skill-card">
 
-                <div class="skill-icon">
-                    <i class="fa-solid fa-user-check"></i>
-                </div>
+<div class="skill-card">
 
-                <h3>Pre-Authorization Support</h3>
+<div class="skill-icon">SQL</div>
 
-                <p>
-                    Supporting healthcare providers with
-                    pre-authorization requirements and
-                    eligibility verification.
-                </p>
+<h3>SQL</h3>
 
-            </div>
+<p>
+Data extraction, joins, subqueries, aggregations,
+CTEs, window functions and reporting queries.
+</p>
 
-            <!-- Skill Card 5 -->
+<div class="progress">
 
-            <div class="skill-card">
+<div class="progress-top">
+<span>Expertise</span>
+<span>88%</span>
+</div>
 
-                <div class="skill-icon">
-                    <i class="fa-solid fa-chart-line"></i>
-                </div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:88%"></div>
+</div>
 
-                <h3>Reporting & Analytics</h3>
+</div>
 
-                <p>
-                    Creating operational reports,
-                    dashboards, performance summaries,
-                    and management reports.
-                </p>
+</div>
 
-            </div>
 
-            <!-- Skill Card 6 -->
+<div class="skill-card">
 
-            <div class="skill-card">
+<div class="skill-icon">PQ</div>
 
-                <div class="skill-icon">
-                    <i class="fa-solid fa-database"></i>
-                </div>
+<h3>Power Query</h3>
 
-                <h3>Data Management</h3>
+<p>
+Data cleaning, transformation, merging,
+appending and ETL workflows.
+</p>
 
-                <p>
-                    Data validation, maintenance,
-                    system administration, provider records
-                    management, and quality assurance.
-                </p>
+<div class="progress">
 
-            </div>
+<div class="progress-top">
+<span>Expertise</span>
+<span>92%</span>
+</div>
 
-        </div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:92%"></div>
+</div>
 
-        <!-- Progress Skills -->
+</div>
 
-        <div class="skill-progress-section">
+</div>
 
-            <div class="skill-progress-left">
 
-                <h3>Professional Skill Levels</h3>
+<div class="skill-card">
 
-                <p>
-                    Demonstrated expertise developed through
-                    4+ years of healthcare operations,
-                    provider relations, and claims processing.
-                </p>
+<div class="skill-icon">DX</div>
 
-            </div>
+<h3>DAX</h3>
 
-            <div class="skill-progress-right">
+<p>
+Calculated columns, measures, time intelligence,
+filter context and advanced business calculations.
+</p>
 
-                <!-- Skill -->
+<div class="progress">
 
-                <div class="progress-item">
+<div class="progress-top">
+<span>Expertise</span>
+<span>90%</span>
+</div>
 
-                    <div class="progress-title">
+<div class="progress-bar">
+<div class="progress-fill" style="width:90%"></div>
+</div>
 
-                        <span>Healthcare Claims Processing</span>
-                        <span>95%</span>
+</div>
 
-                    </div>
+</div>
 
-                    <div class="progress-bar">
-                        <div class="progress-fill fill-95"></div>
-                    </div>
 
-                </div>
+<div class="skill-card">
 
-                <!-- Skill -->
+<div class="skill-icon">PY</div>
 
-                <div class="progress-item">
+<h3>Basic Python</h3>
 
-                    <div class="progress-title">
+<p>
+Pandas, NumPy, data cleaning, automation and
+exploratory data analysis.
+</p>
 
-                        <span>Provider Relations</span>
-                        <span>95%</span>
+<div class="progress">
 
-                    </div>
+<div class="progress-top">
+<span>Expertise</span>
+<span>50%</span>
+</div>
 
-                    <div class="progress-bar">
-                        <div class="progress-fill fill-95"></div>
-                    </div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:75%"></div>
+</div>
 
-                </div>
+</div>
 
-                <!-- Skill -->
+</div>
 
-                <div class="progress-item">
 
-                    <div class="progress-title">
+</div>
 
-                        <span>Contract Administration</span>
-                        <span>90%</span>
-
-                    </div>
-
-                    <div class="progress-bar">
-                        <div class="progress-fill fill-90"></div>
-                    </div>
-
-                </div>
-
-                <!-- Skill -->
-
-                <div class="progress-item">
-
-                    <div class="progress-title">
-
-                        <span>Salesforce CRM</span>
-                        <span>92%</span>
-
-                    </div>
-
-                    <div class="progress-bar">
-                        <div class="progress-fill fill-92"></div>
-                    </div>
-
-                </div>
-
-                <!-- Skill -->
-
-                <div class="progress-item">
-
-                    <div class="progress-title">
-
-                        <span>MS Excel Reporting</span>
-                        <span>95%</span>
-
-                    </div>
-
-                    <div class="progress-bar">
-                        <div class="progress-fill fill-95"></div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- ==========================================
-        SKILLS SECTION END
-========================================== -->
 
+<!-- =====================================================
+     STATS
+===================================================== -->
 
+<section class="stats">
 
+<div class="container">
 
-<!-- ==========================================
-        EXPERIENCE SECTION START
-========================================== -->
+<div class="stats-grid">
 
-<section class="experience" id="experience">
+<div class="stat">
 
-    <div class="container">
+<h2 data-target="4.8">0</h2>
+<p>Years Experience</p>
 
-        <div class="section-title">
+</div>
 
-            <span>Professional Journey</span>
+<div class="stat">
 
-            <h2>Work Experience</h2>
+<h2 data-target="35">0</h2>
+<p>Projects Completed</p>
 
-        </div>
+</div>
 
-        <div class="timeline">
+<div class="stat">
 
-            <!-- Timeline Item -->
+<h2 data-target="1">0</h2>
+<p>Clients</p>
 
-            <div class="timeline-item">
+</div>
 
-                <div class="timeline-dot"></div>
+<div class="stat">
 
-                <div class="timeline-content">
+<h2 data-target="15">0</h2>
+<p>Dashboards</p>
 
-                    <span class="timeline-date">
-                        February 2021 – October 2025
-                    </span>
+</div>
 
-                    <h3>
-                        Senior Process Executive
-                    </h3>
+</div>
 
-                    <h4>
-                        Cognizant Technology Solutions (CTS)
-                    </h4>
-
-                    <p>
-                        Worked in healthcare operations,
-                        provider relations, claims processing,
-                        reporting, customer support,
-                        contract administration, and data management.
-                    </p>
-
-                    <div class="timeline-responsibilities">
-
-                        <h5>
-                            Provider Relations & Customer Support
-                        </h5>
-
-                        <ul>
-
-                            <li>
-                                Managed inbound and outbound provider communications.
-                            </li>
-
-                            <li>
-                                Resolved provider inquiries related to claims,
-                                contracts, and pre-authorizations.
-                            </li>
-
-                            <li>
-                                Maintained strong provider relationships.
-                            </li>
-
-                            <li>
-                                Coordinated with internal teams for issue resolution.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="timeline-responsibilities">
-
-                        <h5>
-                            Claims Processing & Operations
-                        </h5>
-
-                        <ul>
-
-                            <li>
-                                Supported claims processing activities.
-                            </li>
-
-                            <li>
-                                Performed claims verification and status checks.
-                            </li>
-
-                            <li>
-                                Investigated claim issues and delays.
-                            </li>
-
-                            <li>
-                                Ensured compliance with operational standards.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="timeline-responsibilities">
-
-                        <h5>
-                            Data Management & System Administration
-                        </h5>
-
-                        <ul>
-
-                            <li>
-                                Maintained provider records and contract information.
-                            </li>
-
-                            <li>
-                                Ensured data accuracy and validation.
-                            </li>
-
-                            <li>
-                                Supported onboarding activities.
-                            </li>
-
-                            <li>
-                                Managed healthcare operational systems.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="timeline-responsibilities">
-
-                        <h5>
-                            Reporting & Administrative Support
-                        </h5>
-
-                        <ul>
-
-                            <li>
-                                Generated operational reports and dashboards.
-                            </li>
-
-                            <li>
-                                Prepared provider activity summaries.
-                            </li>
-
-                            <li>
-                                Coordinated critical case communications.
-                            </li>
-
-                            <li>
-                                Maintained business documentation.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- ==========================================
-        PROJECTS SECTION START
-========================================== -->
 
-<section class="projects" id="projects">
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
 
-    <div class="container">
+<section id="experience">
 
-        <div class="section-title">
-            <span>Portfolio Projects</span>
-            <h2>Key Healthcare Projects</h2>
-        </div>
+<div class="container">
 
-        <div class="projects-grid">
+<div class="section-title">
 
-            <!-- Project 1 -->
+<span>Experience</span>
 
-            <div class="project-card">
+<h2>Professional Journey</h2>
 
-                <div class="project-number">
-                    01
-                </div>
+<p>
+A sample career timeline that can be replaced
+with your real professional experience.
+</p>
 
-                <div class="project-content">
+</div>
 
-                    <h3>
-                        Nationwide Project
-                    </h3>
 
-                    <h4>
-                        Process Improvement Across Three Lines of Business
-                    </h4>
+<div class="timeline">
 
-                    <p>
-                        Analyzed provider inquiries, operational workflows,
-                        and system performance metrics to identify process
-                        bottlenecks and opportunities for operational
-                        improvement.
-                    </p>
 
-                    <div class="project-highlights">
+<div class="timeline-item">
 
-                        <h5>Key Contributions</h5>
+<div class="timeline-dot"></div>
 
-                        <ul>
+<div class="timeline-content">
 
-                            <li>
-                                Analyzed workflow inefficiencies.
-                            </li>
+<h3>Process Executive - Data Analyst</h3>
 
-                            <li>
-                                Identified process bottlenecks.
-                            </li>
+<h4>Cognizant Technology Solutions</h4>
 
-                            <li>
-                                Developed operational comparison reports.
-                            </li>
+<span class="timeline-date">
+Feb2021 - Oct2025
+</span>
 
-                            <li>
-                                Recommended workflow optimization strategies.
-                            </li>
+<p>
+Responsible for developing Power BI dashboards,
+automating Excel reports and delivering business
+insights to management.
+</p>
 
-                            <li>
-                                Improved operational consistency.
-                            </li>
+<br>
 
-                            <li>
-                                Collaborated with cross-functional teams.
-                            </li>
+<ul>
 
-                        </ul>
+<li>Created 15+ Power BI dashboards.</li>
 
-                    </div>
+<li>Automated recurring Excel reports.</li>
 
-                    <div class="project-tools">
+<li>Built DAX measures for business KPIs.</li>
 
-                        <span>MS Excel</span>
-                        <span>Reporting Tools</span>
-                        <span>CRM Systems</span>
-                        <span>Data Analysis</span>
+<li>Reduced manual reporting effort.</li>
 
-                    </div>
+<li>I can handled backend operations like data processing, client Operations and MIS Reports</li>
 
-                </div>
+</ul>
 
-            </div>
+</div>
 
-            <!-- Project 2 -->
+</div>
 
-            <div class="project-card">
 
-                <div class="project-number">
-                    02
-                </div>
 
-                <div class="project-content">
+</div>
 
-                    <h3>
-                        Verily Project
-                    </h3>
+</div>
 
-                    <h4>
-                        Claims Operations & Provider Support
-                    </h4>
 
-                    <p>
-                        Served as the primary point of contact for healthcare
-                        providers regarding claims processing, pre-authorizations,
-                        contract administration, and operational support.
-                    </p>
 
-                    <div class="project-highlights">
 
-                        <h5>Key Contributions</h5>
 
-                        <ul>
+</div>
 
-                            <li>
-                                Managed provider support operations.
-                            </li>
-
-                            <li>
-                                Maintained provider contracts and records.
-                            </li>
-
-                            <li>
-                                Supported claims processing activities.
-                            </li>
-
-                            <li>
-                                Ensured data accuracy and compliance.
-                            </li>
-
-                            <li>
-                                Handled provider escalations.
-                            </li>
-
-                            <li>
-                                Improved service delivery standards.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="project-tools">
-
-                        <span>Salesforce</span>
-                        <span>Citrix</span>
-                        <span>Claims Systems</span>
-                        <span>MS Excel</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- ==========================================
-        PROJECTS SECTION END
-========================================== -->
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Portfolio</span>
+
+<h2>Featured Projects</h2>
+
+<p>
+Selected analytics projects demonstrating Excel,
+Power BI, SQL and business intelligence capabilities.
+</p>
+
+</div>
 
 
+<div class="projects-grid">
 
 
+<div class="project-card">
 
-<!-- ==========================================
-        ACHIEVEMENTS SECTION START
-========================================== -->
+<div class="project-image">
 
-<section class="achievements">
+<div class="dashboard">
 
-    <div class="container">
+<div class="dashboard-top">
 
-        <div class="section-title">
+<div class="dashboard-dot"></div>
+<div class="dashboard-dot"></div>
+<div class="dashboard-dot"></div>
 
-            <span>Professional Highlights</span>
+</div>
 
-            <h2>Achievements & Accomplishments</h2>
+<div class="dashboard-body">
 
-        </div>
+<div class="d-box"></div>
+<div class="d-box"></div>
+<div class="d-box"></div>
+<div class="d-box"></div>
 
-        <div class="achievement-grid">
+<div class="chart"></div>
+<div class="d-box"></div>
 
-            <div class="achievement-card">
+</div>
 
-                <i class="fa-solid fa-briefcase"></i>
+</div>
 
-                <h3>4+ Years</h3>
+</div>
 
-                <p>
-                    Healthcare Operations Experience
-                </p>
+<div class="project-content">
 
-            </div>
+<h3>Sales Performance Dashboard</h3>
 
-            <div class="achievement-card">
+<p>
+Interactive Power BI dashboard for monitoring
+revenue, sales targets, products and regional performance.
+</p>
 
-                <i class="fa-solid fa-hospital-user"></i>
+<div class="tags">
 
-                <h3>5000+</h3>
+<span class="tag">Power BI</span>
+<span class="tag">DAX</span>
+<span class="tag">SQL</span>
+<span class="tag">Power Query</span>
 
-                <p>
-                    Provider Interactions Managed
-                </p>
+</div>
 
-            </div>
+<a href="#" class="btn btn-outline">
+View Project →
+</a>
 
-            <div class="achievement-card">
+</div>
 
-                <i class="fa-solid fa-chart-line"></i>
+</div>
 
-                <h3>100%</h3>
 
-                <p>
-                    Data Accuracy Commitment
-                </p>
+<div class="project-card">
 
-            </div>
+<div class="project-image">
 
-            <div class="achievement-card">
+<div class="dashboard">
 
-                <i class="fa-solid fa-award"></i>
+<div class="dashboard-top">
 
-                <h3>2+</h3>
+<div class="dashboard-dot"></div>
+<div class="dashboard-dot"></div>
+<div class="dashboard-dot"></div>
 
-                <p>
-                    Major Healthcare Projects
-                </p>
+</div>
 
-            </div>
+<div class="dashboard-body">
 
-            <div class="achievement-card">
+<div class="d-box"></div>
+<div class="d-box"></div>
+<div class="d-box"></div>
+<div class="d-box"></div>
 
-                <i class="fa-solid fa-users"></i>
+<div class="chart"></div>
+<div class="d-box"></div>
 
-                <h3>Excellent</h3>
+</div>
 
-                <p>
-                    Stakeholder Communication
-                </p>
+</div>
 
-            </div>
+</div>
 
-            <div class="achievement-card">
+<div class="project-content">
 
-                <i class="fa-solid fa-gear"></i>
+<h3>Financial Analytics Dashboard</h3>
 
-                <h3>Expert</h3>
+<p>
+Financial reporting dashboard analyzing revenue,
+expenses, profit margins and monthly trends.
+</p>
 
-                <p>
-                    Process Improvement Skills
-                </p>
+<div class="tags">
 
-            </div>
+<span class="tag">Power BI</span>
+<span class="tag">Excel</span>
+<span class="tag">DAX</span>
 
-        </div>
+</div>
 
-    </div>
+<a href="#" class="btn btn-outline">
+View Project →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<div class="project-image">
+
+<div class="dashboard">
+
+<div class="dashboard-top">
+
+<div class="dashboard-dot"></div>
+<div class="dashboard-dot"></div>
+<div class="dashboard-dot"></div>
+
+</div>
+
+<div class="dashboard-body">
+
+<div class="d-box"></div>
+<div class="d-box"></div>
+<div class="d-box"></div>
+<div class="d-box"></div>
+
+<div class="chart"></div>
+<div class="d-box"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-content">
+
+<h3>HR Analytics Dashboard</h3>
+
+<p>
+Employee analytics solution covering headcount,
+attrition, department performance and hiring trends.
+</p>
+
+<div class="tags">
+
+<span class="tag">Power BI</span>
+<span class="tag">Excel</span>
+<span class="tag">DAX</span>
+
+</div>
+
+<a href="#" class="btn btn-outline">
+View Project →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<div class="project-image">
+
+<div class="dashboard">
+
+<div class="dashboard-top">
+
+<div class="dashboard-dot"></div>
+<div class="dashboard-dot"></div>
+<div class="dashboard-dot"></div>
+
+</div>
+
+<div class="dashboard-body">
+
+<div class="d-box"></div>
+<div class="d-box"></div>
+<div class="d-box"></div>
+<div class="d-box"></div>
+
+<div class="chart"></div>
+<div class="d-box"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-content">
+
+<h3>Inventory Analytics</h3>
+
+<p>
+Inventory dashboard tracking stock levels,
+products, warehouses and reorder requirements.
+</p>
+
+<div class="tags">
+
+<span class="tag">Excel</span>
+<span class="tag">Power BI</span>
+<span class="tag">SQL</span>
+
+</div>
+
+<a href="#" class="btn btn-outline">
+View Project →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
-<!-- ==========================================
-        ACHIEVEMENTS SECTION END
-========================================== -->
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Services</span>
+
+<h2>What I Can Do</h2>
+
+<p>
+Analytics and reporting solutions for businesses
+that want to make better use of their data.
+</p>
+
+</div>
 
 
+<div class="services-grid">
 
 
+<div class="service">
 
-<!-- ==========================================
-        EDUCATION SECTION START
-========================================== -->
+<div class="service-number">01</div>
 
-<section class="education" id="education">
+<h3>Power BI Dashboards</h3>
 
-    <div class="container">
+<p>
+Design and development of interactive dashboards,
+KPIs, reports and management analytics.
+</p>
 
-        <div class="section-title">
+</div>
 
-            <span>Academic Background</span>
 
-            <h2>Education Journey</h2>
+<div class="service">
 
-        </div>
+<div class="service-number">02</div>
 
-        <div class="education-timeline">
+<h3>Excel Automation</h3>
 
-            <!-- MBA -->
+<p>
+Advanced Excel reporting, formulas, Power Query,
+Pivot Tables and automated reporting workflows.
+</p>
 
-            <div class="education-card">
+</div>
 
-                <div class="education-year">
-                    2018
-                </div>
 
-                <div class="education-content">
+<div class="service">
 
-                    <h3>
-                        Master of Business Administration (MBA)
-                    </h3>
+<div class="service-number">03</div>
 
-                    <h4>
-                        Marketing
-                    </h4>
+<h3>Data Analysis</h3>
 
-                    <p>
-                        VBIT
-                    </p>
+<p>
+Analyze business datasets and identify useful
+patterns, trends and performance indicators.
+</p>
 
-                </div>
+</div>
 
-            </div>
 
-            <!-- Degree -->
+<div class="service">
 
-            <div class="education-card">
+<div class="service-number">04</div>
 
-                <div class="education-year">
-                    2015
-                </div>
+<h3>SQL Reporting</h3>
 
-                <div class="education-content">
+<p>
+Create optimized queries to extract and prepare
+data for dashboards and reporting.
+</p>
 
-                    <h3>
-                        Bachelor of Commerce (B.Com)
-                    </h3>
+</div>
 
-                    <h4>
-                        Computers
-                    </h4>
 
-                    <p>
-                        Little Flower Degree College
-                    </p>
+<div class="service">
 
-                </div>
+<div class="service-number">05</div>
 
-            </div>
+<h3>Business Reporting</h3>
 
-            <!-- Intermediate -->
+<p>
+Convert raw data into management-ready reports
+that are easy to understand.
+</p>
 
-            <div class="education-card">
+</div>
 
-                <div class="education-year">
-                    2012
-                </div>
 
-                <div class="education-content">
+<div class="service">
 
-                    <h3>
-                        Intermediate
-                    </h3>
+<div class="service-number">06</div>
 
-                    <h4>
-                        CEC
-                    </h4>
+<h3>Analytics Training</h3>
 
-                    <p>
-                        Loyola Academy Junior College
-                    </p>
+<p>
+Training programs covering Excel, Power BI,
+SQL, dashboards and data analytics.
+</p>
 
-                </div>
+</div>
 
-            </div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
-<!-- ==========================================
-        EDUCATION SECTION END
-========================================== -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Contact</span>
+
+<h2>Let's Work Together</h2>
+
+<p>
+Have a dashboard, reporting or analytics requirement?
+Send me a message.
+</p>
+
+</div>
 
 
+<div class="contact-grid">
 
 
+<div class="contact-info">
 
-<!-- ==========================================
-        CERTIFICATIONS SECTION START
-========================================== -->
 
-<section class="certifications">
+<div class="contact-item">
 
-    <div class="container">
+<span>Email</span>
 
-        <div class="section-title">
+<strong>
+dineeshkumar41@gmail.com
+</strong>
 
-            <span>Professional Strengths</span>
+</div>
 
-            <h2>Areas of Expertise</h2>
 
-        </div>
+<div class="contact-item">
 
-        <div class="certification-grid">
+<span>Phone</span>
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Healthcare Claims Processing
-            </div>
+<strong>
++91 82478 36373
+</strong>
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Provider Relations Management
-            </div>
+</div>
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Contract Administration
-            </div>
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Salesforce CRM
-            </div>
+<div class="contact-item">
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Citrix Applications
-            </div>
+<span>Location</span>
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Advanced MS Excel
-            </div>
+<strong>
+Hyderabad, Telangana, India
+</strong>
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Reporting & Analytics
-            </div>
+</div>
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Data Validation
-            </div>
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Process Improvement
-            </div>
+<div class="contact-item">
 
-            <div class="certification-card">
-                <i class="fa-solid fa-check-circle"></i>
-                Healthcare Operations
-            </div>
+<span>LinkedIn</span>
 
-        </div>
+<strong>
+https://www.linkedin.com/in/dinesh-kumar-patil-783213160
+</strong>
 
-    </div>
+</div>
+
+
+</div>
+
+
+<form class="contact-form" onsubmit="sendMessage(event)">
+
+<div class="form-group">
+
+<label>Your Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Message</label>
+
+<textarea
+id="message"
+placeholder="Tell me about your requirement..."
+required></textarea>
+
+</div>
+
+
+<button class="btn btn-primary" type="submit">
+Send Message
+</button>
+
+</form>
+
+
+</div>
+
+</div>
 
 </section>
 
-<!-- ==========================================
-        CONTACT SECTION START
-========================================== -->
 
-<section class="contact" id="contact">
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-    <div class="container">
+<footer>
 
-        <div class="section-title">
+<div class="container">
 
-            <span>Get In Touch</span>
+<p>
+© <span id="year"></span> Dines. All Rights Reserved.
+</p>
 
-            <h2>Let's Connect</h2>
+<p style="margin-top:7px;">
+Excel • Power BI • SQL • Data Analytics
+</p>
 
-        </div>
-
-        <div class="contact-wrapper">
-
-            <!-- Contact Information -->
-
-            <div class="contact-info">
-
-                <h3>
-                    Contact Information
-                </h3>
-
-                <p>
-                    Feel free to reach out regarding healthcare operations,
-                    claims management, provider relations opportunities,
-                    collaborations, or professional networking.
-                </p>
-
-                <!-- Contact Card -->
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-
-                    <div class="contact-details">
-                        <h4>Location</h4>
-                        <p>Hyderabad, Telangana, India</p>
-                    </div>
-
-                </div>
-
-                <!-- Contact Card -->
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-
-                    <div class="contact-details">
-                        <h4>Phone</h4>
-                        <p>+91 8247836373</p>
-                    </div>
-
-                </div>
-
-                <!-- Contact Card -->
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-
-                    <div class="contact-details">
-                        <h4>Email</h4>
-                        <p>dineeshkumar41@gmail.com</p>
-                    </div>
-
-                </div>
-
-                <!-- Contact Card -->
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </div>
-
-                    <div class="contact-details">
-                        <h4>LinkedIn</h4>
-                        <p>Add LinkedIn Profile URL</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Contact Form -->
-
-            <div class="contact-form-container">
-
-                <form class="contact-form">
-
-                    <div class="form-group">
-
-                        <input
-                            type="text"
-                            placeholder="Your Full Name"
-                            required
-                        >
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <input
-                            type="email"
-                            placeholder="Your Email Address"
-                            required
-                        >
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <input
-                            type="text"
-                            placeholder="Subject"
-                            required
-                        >
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <textarea
-                            rows="6"
-                            placeholder="Write Your Message..."
-                            required
-                        ></textarea>
-
-                    </div>
-
-                    <button
-                        type="submit"
-                        class="submit-btn"
-                    >
-                        Send Message
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================================
-        CONTACT SECTION END
-========================================== -->
-
-
-
-
-
-<!-- ==========================================
-        CTA SECTION START
-========================================== -->
-
-<section class="cta-section">
-
-    <div class="container">
-
-        <div class="cta-content">
-
-            <h2>
-                Ready To Discuss Healthcare Operations Opportunities?
-            </h2>
-
-            <p>
-                Let's connect and explore how my healthcare operations,
-                provider relations, claims processing, and reporting
-                expertise can contribute to organizational success.
-            </p>
-
-            <div class="cta-buttons">
-
-                <a href="#" class="cta-btn">
-                    Download Resume
-                </a>
-
-                <a href="#contact" class="cta-btn-outline">
-                    Contact Me
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================================
-        CTA SECTION END
-========================================== -->
-
-
-
-
-
-<!-- ==========================================
-        FOOTER START
-========================================== -->
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="footer-content">
-
-            <!-- About -->
-
-            <div class="footer-column">
-
-                <h3>
-                    Dinesh Kumar
-                </h3>
-
-                <p>
-                    Healthcare Operations Professional specializing in
-                    claims processing, provider relations, contract
-                    administration, reporting, and healthcare operations.
-                </p>
-
-                <div class="footer-social">
-
-                    <a href="#">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fas fa-phone"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Quick Links -->
-
-            <div class="footer-column">
-
-                <h3>
-                    Quick Links
-                </h3>
-
-                <ul>
-
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-
-                    <li>
-                        <a href="#skills">Skills</a>
-                    </li>
-
-                    <li>
-                        <a href="#experience">Experience</a>
-                    </li>
-
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- Services -->
-
-            <div class="footer-column">
-
-                <h3>
-                    Expertise
-                </h3>
-
-                <ul>
-
-                    <li>
-                        Healthcare Claims Processing
-                    </li>
-
-                    <li>
-                        Provider Relations
-                    </li>
-
-                    <li>
-                        Contract Administration
-                    </li>
-
-                    <li>
-                        Reporting & Analytics
-                    </li>
-
-                    <li>
-                        Data Management
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- Contact -->
-
-            <div class="footer-column">
-
-                <h3>
-                    Contact
-                </h3>
-
-                <ul>
-
-                    <li>
-                        Hyderabad, Telangana
-                    </li>
-
-                    <li>
-                        +91 8247836373
-                    </li>
-
-                    <li>
-                        dineeshkumar41@gmail.com
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <p>
-                © 2026 Dinesh Kumar. All Rights Reserved.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </footer>
 
 
-
-
-
-
-<button id="backToTop">
-
-    <i class="fa-solid fa-arrow-up"></i>
-
-</button>
-
-
-
-
+<!-- WHATSAPP -->
 
 <a
-    href="https://wa.me/918247836373"
-    target="_blank"
-    class="whatsapp-btn"
->
+href="https://wa.me/918247836373"
+target="_blank"
+class="whatsapp"
+title="Chat on WhatsApp">
 
-    <i class="fa-brands fa-whatsapp"></i>
+WA
 
 </a>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
-<script src="script.js"></script>
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function(){
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", function(){
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+/* =====================================================
+   COUNTER ANIMATION
+===================================================== */
+
+const counters = document.querySelectorAll("[data-target]");
+
+const counterObserver = new IntersectionObserver((entries, observer) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            const counter = entry.target;
+            const target = +counter.getAttribute("data-target");
+
+            let current = 0;
+
+            const updateCounter = () => {
+
+                const increment = target / 60;
+
+                current += increment;
+
+                if(current < target){
+
+                    counter.innerText = Math.ceil(current);
+
+                    requestAnimationFrame(updateCounter);
+
+                }else{
+
+                    counter.innerText = target + "+";
+
+                }
+
+            };
+
+            updateCounter();
+
+            observer.unobserve(counter);
+
+        }
+
+    });
+
+},{threshold:.5});
+
+
+counters.forEach(counter => {
+
+    counterObserver.observe(counter);
+
+});
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    const whatsappMessage =
+        `Hello Alex,%0A%0A` +
+        `Name: ${name}%0A` +
+        `Email: ${email}%0A%0A` +
+        `Message: ${message}`;
+
+
+    window.open(
+        `https://wa.me/919876543210?text=${whatsappMessage}`,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+document.getElementById("year").innerText =
+    new Date().getFullYear();
+
+
+/* =====================================================
+   CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+===================================================== */
+
+document.addEventListener("click", function(event){
+
+    if(
+        window.innerWidth <= 900 &&
+        !navLinks.contains(event.target) &&
+        !menuBtn.contains(event.target)
+    ){
+
+        navLinks.classList.remove("active");
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
+```
